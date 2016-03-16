@@ -42,7 +42,6 @@ public class PersonStoreServerSocket
 				InputStream is = server.getInputStream();
 				ObjectInputStream ois = new ObjectInputStream(is);
 
-				// Close connections
 				oos.close();
 				ois.close();
 				os.close();

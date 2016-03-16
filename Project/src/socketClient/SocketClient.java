@@ -1,7 +1,8 @@
 package socketClient;
 
-import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
@@ -16,12 +17,19 @@ public class SocketClient
 			Socket client = new Socket(serverName, port);
 			System.out.println("Connected!");
 
-			OutputStream outToServer = client.getOutputStream();
+			OutputStream os = client.getOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(os);
 
-			InputStream inFromServer = client.getInputStream();
+			InputStream is = client.getInputStream();
+			ObjectInputStream ois = new ObjectInputStream(is);
 
+			oos.close();
+			ois.close();
+			os.close();
+			is.close();
 			client.close();
-		} catch (IOException e)
+
+		} catch (Exception e)
 		{
 			e.printStackTrace();
 		}
