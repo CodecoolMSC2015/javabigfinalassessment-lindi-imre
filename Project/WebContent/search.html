@@ -5,10 +5,13 @@
 <title>Search</title>
 </head>
 <body>
-	<form action="Search" method="post">
-		<input type="text" name="criteria"><br>
+	<h2>Search in employees</h2>
+	<br>
+	<form action="SearchServlet" method="post">
+		<input type="text" name="criterias"><br><br>
 		<input type="radio" name="searchType" value="optional" checked> Optional<br>
-  		<input type="radio" name="searchType" value="mandatory"> Mandatory<br>
+  		<input type="radio" name="searchType" value="mandatory"> Mandatory<br><br>
+  		<input type="submit" value="Search"> 
 	</form>
 </body>
 </html>

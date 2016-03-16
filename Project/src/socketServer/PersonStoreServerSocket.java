@@ -28,6 +28,8 @@ public class PersonStoreServerSocket
 			InputStream is = server.getInputStream();
 			ObjectInputStream ois = new ObjectInputStream(is);
 
+			server.close();
+
 		} catch (Exception e)
 		{
 			e.printStackTrace();
