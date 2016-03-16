@@ -1,6 +1,5 @@
 package socketServer;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -19,8 +18,7 @@ public class CSVDataReader extends DataReader
 	@Override
 	public Set<Person> getPerson()
 	{
-		Set<Person> result = new HashSet<Person>();
-		return result;
+		return null;
 	}
 
 	@Override
