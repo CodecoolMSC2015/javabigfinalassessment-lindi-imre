@@ -1,5 +1,6 @@
 package socketServer;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -7,7 +8,7 @@ import person.Person;
 
 public class CSVDataReader extends DataReader
 {
-	private String csvFilePath;
+	private String csvFilePath = "D:\\bfa\\persons.csv";
 	List<Person> persons;
 
 	public CSVDataReader(String filePath)
@@ -18,7 +19,8 @@ public class CSVDataReader extends DataReader
 	@Override
 	public Set<Person> getPerson()
 	{
-		return null;
+		Set<Person> result = new HashSet<Person>();
+		return result;
 	}
 
 	@Override
