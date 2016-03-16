@@ -8,10 +8,8 @@ import java.net.Socket;
 public class SocketClient
 {
 
-	public SocketClient()
+	public SocketClient(String serverName, int port)
 	{
-		String serverName = "localhost";
-		int port = 5678;
 		try
 		{
 			System.out.println("Connecting to " + serverName + " on port " + port);
@@ -29,4 +27,8 @@ public class SocketClient
 		}
 	}
 
+	public static void main(String[] args)
+	{
+		SocketClient client = new SocketClient("localhost", 5678);
+	}
 }

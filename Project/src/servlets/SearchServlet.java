@@ -47,7 +47,7 @@ public class SearchServlet extends HttpServlet
 		String searchType = request.getParameter("searchType");
 		System.out.println(criterias + "\n" + searchType);
 
-		List<String> splittedCriterias = Arrays.asList(criterias.split(","));
+		List<String> splittedCriterias = Arrays.asList(criterias.split(";"));
 
 		for (String string : splittedCriterias)
 		{
