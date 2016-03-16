@@ -10,34 +10,28 @@ public class CSVDataReader extends DataReader
 	private String csvFilePath;
 	List<Person> persons;
 
-	public CSVDataReader(String property)
+	public CSVDataReader(String filePath)
 	{
+		csvFilePath = filePath;
 	}
 
-	public Set<Person> getPersons()
+	@Override
+	public Set<Person> getPerson()
 	{
 		return null;
 	}
 
 	@Override
-	public Set<Person> getPerson(String property, SearchType searchType)
+	public void setSearchCriteria(String searchCriteria)
 	{
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setSearchCriteria(String property)
-	{
-		// TODO Auto-generated method stub
+		this.searchCriteria = searchCriteria;
 
 	}
 
 	@Override
 	public void setSearchType(SearchType searchType)
 	{
-		// TODO Auto-generated method stub
-
+		this.searchType = searchType;
 	}
 
 }
