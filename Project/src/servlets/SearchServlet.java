@@ -1,13 +1,13 @@
 package servlets;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import socketClient.SocketClient;
 
 public class SearchServlet extends HttpServlet
 {
@@ -20,7 +20,7 @@ public class SearchServlet extends HttpServlet
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-
+		doPost(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -31,12 +31,7 @@ public class SearchServlet extends HttpServlet
 		String searchType = request.getParameter("searchType");
 		System.out.println(criterias + "\n" + searchType);
 
-		List<String> splittedCriterias = Arrays.asList(criterias.split(";"));
-
-		for (String string : splittedCriterias)
-		{
-			System.out.println(string);
-		}
+		SocketClient client = new SocketClient("localhost", 5678);
 
 	}
 

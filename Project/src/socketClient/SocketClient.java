@@ -35,8 +35,4 @@ public class SocketClient
 		}
 	}
 
-	public static void main(String[] args)
-	{
-		SocketClient client = new SocketClient("localhost", 5678);
-	}
 }

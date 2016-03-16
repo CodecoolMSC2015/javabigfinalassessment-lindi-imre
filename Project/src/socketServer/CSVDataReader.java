@@ -7,7 +7,7 @@ import person.Person;
 
 public class CSVDataReader extends DataReader
 {
-	private String csvFilePath = "D:\\bfa\\persons.csv";
+	private String csvFilePath;
 	List<Person> persons;
 
 	public CSVDataReader(String filePath)
